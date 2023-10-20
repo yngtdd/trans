@@ -1,0 +1,15 @@
+lang: en
+
+home:
+  welcome: trans*
+
+menu_links: []
+
+# Metas plugin https://lume.land/plugins/metas/#description
+metas:
+  site: trans*
+  description: Todd's personal blog
+  title: "=title"
+  image: "=image"
+  twitter: "@username"
+  lang: en
