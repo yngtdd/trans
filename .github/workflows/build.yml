@@ -19,7 +19,7 @@ jobs:
 
       - name: Build site
         run: |
-          deno task build --location=https://yngtdd.github.io/www/
+          deno task build --location=https://yngtdd.github.io/trans/
 
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v2.0.1
