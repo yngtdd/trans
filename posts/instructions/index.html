@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to install this theme - trans*</title>
+
+    <meta name="supported-color-schemes" content="light dark">
+    <meta name="theme-color" content="hsl(220, 20%, 100%)" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="hsl(220, 20%, 10%)" media="(prefers-color-scheme: dark)">
+    
+    <link rel="stylesheet" href="/trans/styles.css">
+    <link rel="alternate" href="/trans/feed.xml" type="application/atom+xml" title="trans*">
+    <link rel="alternate" href="/trans/feed.json" type="application/json" title="trans*">
+    <link rel="icon" type="image/png" sizes="32x32" href="/trans/favicon.png">
+    <script src="/trans/js/main.js" type="module"></script>
+    
+  <meta property="og:type" content="website">
+<meta property="og:site_name" content="trans*">
+<meta property="og:locale" content="en">
+<meta property="og:title" content="How to install this theme">
+<meta property="og:description" content="Todd's personal blog">
+<meta property="og:url" content="https://yngtdd.github.io/trans/posts/instructions/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@username">
+<meta itemprop="name" content="How to install this theme">
+<meta itemprop="description" content="Todd's personal blog">
+<meta name="description" content="Todd's personal blog">
+</head>
+  <body>
+    <nav class="navbar">
+      <a href="/trans/" class="navbar-home">
+        
+          <strong>trans*</strong>
+        
+      </a>
+
+      <ul class="navbar-links">
+        <li>
+          <a href="/trans/archive/">
+            Archive
+          </a>
+        </li>
+      
+      </ul>
+    </nav>
+
+    <main class="body-post">
+      <article class="post" data-pagefind-body="" data-title="How to install this theme" data-pagefind-index-attrs="data-title">
+  <header class="post-header">
+    <h1 class="post-title">How to install this theme</h1>
+
+    <div class="post-details">
+  
+    
+    
+      <p>by Óscar Otero</p>
+    
+  
+
+  <p>
+    <time datetime="2022-06-12 00:00:00">
+      June 12th, 2022
+    </time>
+  </p>
+
+  <p>2 min read</p>
+
+  <div class="post-tagsss">
+    
+      
+
+      
+        <a data-pagefind-filter="filter" class="badge" href="/trans/archive/instructions/">Instructions</a>
+      
+    
+  </div>
+</div>
+
+  </header>
+
+  
+  <nav class="toc">
+    <h2>Table of contents</h2>
+    <ol>
+      
+      <li>
+        <a href="#customization">Customization</a>
+
+        
+      </li>
+      
+    </ol>
+  </nav>
+  
+
+  <div class="post-body body">
+    <p><strong>Simple blog</strong> is a clean and minimal blog theme for Lume, with support for</p>
+<!--more-->
+<p>tags and authors. It allows to build your own blog <strong>in seconds</strong>, providing
+also support for RSS.</p>
+<p>To use it, just import the theme in your <code>_config.ts</code> file:</p>
+<pre class="language-js" tabindex="0"><code class="language-js"><span class="token keyword">import</span> lume <span class="token keyword">from</span> <span class="token string">"lume"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> blog <span class="token keyword">from</span> <span class="token string">"https://deno.land/x/lume_theme_simple_blog/mod.ts"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> site <span class="token operator">=</span> <span class="token function">lume</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+site<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">blog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> site<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="customization" tabindex="-1"><a href="#customization" class="header-anchor">Customization</a></h2>
+<p>You can customize the blog creating the remote files in your local folder. For
+example, to change some style variables, create the file
+<code>_includes/css/variables.css</code> file in your local folder and edit the variables
+values:</p>
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">:root</span> <span class="token punctuation">{</span>
+  <span class="token comment">/* Light colors */</span>
+  <span class="token property">color-scheme</span><span class="token punctuation">:</span> light<span class="token punctuation">;</span>
+  <span class="token property">--color-base</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 30%<span class="token punctuation">,</span> 10%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--color-text</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 30%<span class="token punctuation">,</span> 20%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--color-dim</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 30%<span class="token punctuation">,</span> 40%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--color-link</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 30%<span class="token punctuation">,</span> 10%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--color-link-hover</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 30%<span class="token punctuation">,</span> 40%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--color-line</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 30%<span class="token punctuation">,</span> 90%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--color-background</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 30%<span class="token punctuation">,</span> 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/* Fonts */</span>
+  <span class="token property">--font-family-code</span><span class="token punctuation">:</span> Consolas<span class="token punctuation">,</span> Menlo<span class="token punctuation">,</span> Monaco<span class="token punctuation">,</span> <span class="token string">"Andale Mono WT"</span><span class="token punctuation">,</span> <span class="token string">"Andale Mono"</span><span class="token punctuation">,</span> <span class="token string">"Lucida Console"</span><span class="token punctuation">,</span> <span class="token string">"Lucida Sans Typewriter"</span><span class="token punctuation">,</span> <span class="token string">"DejaVu Sans Mono"</span><span class="token punctuation">,</span> <span class="token string">"Bitstream Vera Sans Mono"</span><span class="token punctuation">,</span> <span class="token string">"Liberation Mono"</span><span class="token punctuation">,</span> <span class="token string">"Nimbus Mono L"</span><span class="token punctuation">,</span> <span class="token string">"Courier New"</span><span class="token punctuation">,</span> Courier<span class="token punctuation">,</span> monospace<span class="token punctuation">;</span>
+  <span class="token property">--font-family-ui</span><span class="token punctuation">:</span> -apple-system<span class="token punctuation">,</span> system-ui<span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+
+  <span class="token property">--font-code</span><span class="token punctuation">:</span> 1rem/1.5 <span class="token function">var</span><span class="token punctuation">(</span>--font-family-code<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--font-display</span><span class="token punctuation">:</span> bold <span class="token function">clamp</span><span class="token punctuation">(</span>2rem<span class="token punctuation">,</span> 10vw<span class="token punctuation">,</span> 4rem<span class="token punctuation">)</span>/1 <span class="token function">var</span><span class="token punctuation">(</span>--font-family-ui<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--font-display-spacing</span><span class="token punctuation">:</span> -0.02em<span class="token punctuation">;</span>
+  <span class="token property">--font-title</span><span class="token punctuation">:</span> bold <span class="token function">clamp</span><span class="token punctuation">(</span>1.5rem<span class="token punctuation">,</span> 8vw<span class="token punctuation">,</span> 2rem<span class="token punctuation">)</span>/1.2 <span class="token function">var</span><span class="token punctuation">(</span>--font-family-ui<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--font-title-spacing</span><span class="token punctuation">:</span> -0.015em<span class="token punctuation">;</span>
+  <span class="token property">--font-body</span><span class="token punctuation">:</span> <span class="token function">clamp</span><span class="token punctuation">(</span>1rem<span class="token punctuation">,</span> 5vw<span class="token punctuation">,</span> 1.2rem<span class="token punctuation">)</span>/1.5 <span class="token function">var</span><span class="token punctuation">(</span>--font-family-ui<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--font-body-bold</span><span class="token punctuation">:</span> bold <span class="token function">var</span><span class="token punctuation">(</span>--font-body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--font-ui</span><span class="token punctuation">:</span> 1rem/1.4 <span class="token function">var</span><span class="token punctuation">(</span>--font-family-ui<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--font-small</span><span class="token punctuation">:</span> 0.85rem/1.4 <span class="token function">var</span><span class="token punctuation">(</span>--font-family-ui<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/* Space */</span>
+  <span class="token property">--row-gap-small</span><span class="token punctuation">:</span> 2.5rem<span class="token punctuation">;</span>
+  <span class="token property">--row-gap-medium</span><span class="token punctuation">:</span> <span class="token function">clamp</span><span class="token punctuation">(</span>2rem<span class="token punctuation">,</span> 5vh<span class="token punctuation">,</span> 5rem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* Dark colors */</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">prefers-color-scheme</span><span class="token punctuation">:</span> dark<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">:root</span> <span class="token punctuation">{</span>
+    <span class="token property">color-scheme</span><span class="token punctuation">:</span> dark<span class="token punctuation">;</span>
+    <span class="token property">--color-base</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 20%<span class="token punctuation">,</span> 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">--color-text</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 20%<span class="token punctuation">,</span> 80%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">--color-dim</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 20%<span class="token punctuation">,</span> 60%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">--color-link</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 20%<span class="token punctuation">,</span> 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">--color-link-hover</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 20%<span class="token punctuation">,</span> 70%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">--color-line</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 20%<span class="token punctuation">,</span> 20%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">--color-background</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>220<span class="token punctuation">,</span> 20%<span class="token punctuation">,</span> 10%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+  </div>
+
+  
+
+  
+  
+</article>
+
+<nav class="page-pagination pagination">
+  <ul>
+    <li class="pagination-prev">
+      <a href="/trans/posts/secondpost/" rel="prev">
+        <span>← Older post</span>
+        <strong>This is my second post</strong>
+      </a>
+    </li>
+    
+    <li class="pagination-next">
+      <a href="/trans/posts/thirdpost/" rel="next">
+        <span>Newer post →</span>
+        <strong>This is my third post</strong>
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+    </main>
+
+    <!-- Current page: /posts/instructions/ -->
+  
+
+</body></html>
