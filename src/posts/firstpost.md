@@ -1,6 +1,6 @@
 ---
 title: Aspiration
-date: 2023-09-11T09:45:00
+date: 2023-11-11T09:45:00
 author: Todd Young
 tags:
   - Theory
@@ -12,7 +12,6 @@ to critique two accounts of the metaphysics of sex/gender transition.
 <!--more-->
 
 ## Aspirational Identity
-
 
 Note from Stanford,[^1].
 
